@@ -1,18 +1,9 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "functions": {
-    "api/*.js": {
-      "runtime": "@vercel/node@3"
+    "api/**/*.js": {
+      "maxDuration": 10,
+      "memory": 1024
     }
-  },
-  "routes": [
-    {
-      "src": "/api/cosmic-proxy",
-      "dest": "/api/cosmic-proxy.js",
-      "methods": ["GET", "OPTIONS"]
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/api/cosmic-proxy.js"
-    }
-  ]
+  }
 }
