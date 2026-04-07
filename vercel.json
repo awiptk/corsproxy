@@ -1,0 +1,18 @@
+{
+  "functions": {
+    "api/*.js": {
+      "runtime": "nodejs24.x"
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/cosmic-proxy",
+      "dest": "/api/cosmic-proxy.js",
+      "methods": ["GET", "OPTIONS"]
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/cosmic-proxy.js"
+    }
+  ]
+}
