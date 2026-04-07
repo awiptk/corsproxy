@@ -1,7 +1,7 @@
 {
   "functions": {
     "api/*.js": {
-      "runtime": "nodejs24.x"
+      "runtime": "@vercel/node@3"
     }
   },
   "routes": [
